@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/botHealthLL"
+        android:layout_margin="10dp" >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/heart2"
+            android:id="@+id/bHeart1" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/heart2"
+            android:id="@+id/bHeart2" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/heart2"
+            android:id="@+id/bHeart3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/playerHealthLL"
+        android:layout_margin="10dp"
+        android:layout_alignParentEnd="true" >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/heart2"
+            android:id="@+id/pHeart3" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/heart2"
+            android:id="@+id/pHeart2" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/heart2"
+            android:id="@+id/pHeart1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/playersLL"
+        android:layout_below="@id/botHealthLL"
+        android:layout_marginHorizontal="10dp" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gép"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:text="Játékos"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playersLL" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/standingTextView"
+            android:text="0 : 0"
+            android:textSize="40sp"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_below="@id/resultLL"
+        android:id="@+id/playerChoiseLL" >
+
+        <ImageView
+            android:id="@+id/playerChoiceImg"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_gravity="right"
+            android:src="@drawable/rock" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginVertical="20dp"
+        android:id="@+id/resultLL"
+        android:layout_centerInParent="true"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/drawRoundsTextView"
+            android:text="Döntetlenek: 0"
+            android:textSize="30dp"
+            android:layout_marginHorizontal="10dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:textAlignment="center"
+        android:id="@+id/botChoiceLL"
+        android:layout_above="@id/resultLL" >
+
+        <ImageView
+            android:id="@+id/botChoiceImg"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_gravity="left"
+            android:src="@drawable/rock" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:id="@+id/choises" >
+
+        <Button
+            android:id="@+id/rockButton"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginHorizontal="10dp"
+            android:textAlignment="center"
+            android:background="@drawable/rock" />
+        <Button
+            android:id="@+id/paperButton"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:background="@drawable/paper" />
+        <Button
+            android:id="@+id/scissorsButton"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/scissors"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+
+</RelativeLayout>
